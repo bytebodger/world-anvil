@@ -3,8 +3,14 @@
       <title>Random Person</title>
    </head>
    <body>
-      <div id="output">
-         <span id="year"></span>
+      <div>
+         <span id="year"></span> <span id="age"></span> in <span id="country"></span>
+         <br/>
+         <br/>
+         <span id="label"></span>
+         <br/>
+         <br/>
+         <span id="fantasyNameGeneratorLink"></span>
       </div>
    </body>
 </html>
@@ -681,4 +687,12 @@
       age = 'Age of Rivals';
    const yearSpan = document.getElementById('year');
    yearSpan.innerHTML = year.toString();
+   const ageSpan = document.getElementById('age');
+   ageSpan.innerHTML = age;
+   const countrySpan = document.getElementById('country');
+   countrySpan.innerHTML = `<a href='https://www.worldanvil.com/w/excilior/a/${lowercaseCountryName}-article' target='_blank'>${countryName} (${country.demonym})</a>`;
+   const labelSpan = document.getElementById('label');
+   labelSpan.innerHTML = label;
+   const fantasyNameGeneratorLinkSpan = document.getElementById('fantasyNameGeneratorLink');
+   fantasyNameGeneratorLinkSpan.innerHTML = `<a href='https://www.fantasynamegenerators.com/${country.nameBase}.php' target='_blank'>Names</a>`;
 </script>
