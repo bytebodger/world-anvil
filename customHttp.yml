@@ -1,0 +1,9 @@
+applications:
+  - appRoot: world-anvil
+    customHeaders:
+      - pattern: '*.ttf'
+        headers:
+          - key: Access-Control-Allow-Origin
+            value: '*'
+          - key: Access-Control-Allow-Methods
+            value: GET
